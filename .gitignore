@@ -1,0 +1,32 @@
+# macOS specific files
+.DS_Store
+
+# Python related files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# Virtual environments
+env/
+venv/
+ENV/
+venv.bak/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# VSCode settings
+.vscode/
+
+# Logs and database files
+*.log
+*.sqlite3
+
+# Miscellaneous
+*.tmp
+*.temp
+*.bak
+*~
