@@ -133,6 +133,7 @@ print(message[6:])  # From index 6 to the end
 ## 5. String Methods
 
 ### 1. `lower()` and `upper()` Methods
+
 The `lower()` method converts all characters in a string to lowercase, while `upper()` converts them to uppercase:
 ```
 message = 'Hello World'
@@ -144,6 +145,7 @@ print(message.upper())
 ```
 
 ### 2. `count()` Method
+
 The `count()` method counts how many times a substring appears within a string:
 ```
 message = 'Hello World'
@@ -153,3 +155,103 @@ print(message.count('Hello'))
 print(message.count('l'))
 # Output: 3
 ```
+
+### 3. `find()` Method
+
+The `find()` method returns the index of the first occurrence of a substring. If the substring is not found, it returns `-1`:
+```
+message = 'Hello World'
+print(message.find('World'))
+# Output: 6
+
+print(message.find('Universe'))
+# Output: -1
+```
+
+### 4. `replace()` Method
+
+The replace() method replaces a substring with another substring. It doesn’t modify the original string but returns a new string with the specified replacements.
+
+```
+message = 'Hello World'
+new_message = message.replace('World', 'Universe')
+print(new_message)
+
+# Output: Hello Universe
+```
+
+To permanently replace the original string, assign the result back to the variable:
+
+```
+message = 'Hello World'
+message = message.replace('World', 'Universe')
+print(message)
+
+# Output: Hello Universe
+```
+
+---
+
+## 6. String Concatenation
+
+You can concatenate (combine) strings using the `+` operator. Be sure to include spaces where necessary:
+
+```
+greeting = 'Hello'
+name = 'Micheal'
+message = greeting + ' ' + name
+
+print(message)
+
+# Output: Hello Micheal
+```
+---
+
+## 7. Formatted Strings
+For cleaner string concatenation, Python provides `formatted strings` or `f-strings` (introduced in Python 3.6+). These allow variables to be embedded directly into a string.
+
+### Formatted String using `.format()`:
+```
+greeting = 'Hello'
+name = 'Micheal'
+message = '{}, {}. Welcome!'.format(greeting, name)
+print(message)
+
+#Output: Hello, Micheal. Welcome!
+```
+
+### Using f-strings (Python 3.6+)
+F-strings are more concise and allow embedding of variables directly into curly braces:
+
+```
+greeting = 'Hello'
+name = 'Micheal'
+message = f'{greeting}, {name}. Welcome!'
+print(message)
+
+# Output: Hello, Micheal. Welcome!
+```
+You can even use expressions inside f-strings:
+```
+message = f'{greeting}, {name.upper()}. Welcome!'
+print(message)
+
+# Output: Hello, MICHEAL. Welcome!
+```
+
+---
+
+## 8. String Literals
+When concatenating strings, it's easy to forget to add spaces. String literals can help avoid such errors:
+
+```
+greeting = 'Hello'
+name = 'Micheal'
+message = greeting + ', ' + name
+print(message)
+
+# Output: Hello, Micheal
+```
+For more complex cases, it’s better to use formatted strings or f-strings to avoid errors and improve readability.
+
+---
