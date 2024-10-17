@@ -31,6 +31,17 @@ print(type(num))  # Output: <class 'float'>
 
 Python provides a variety of operators that allow you to perform basic arithmetic operations on numbers. These operators work on integers and floats and are essential for performing calculations in programming. Let's go over each operator in detail with examples and practical uses.
 
+**Overview of Python's Arithmetic Operators**
+| Operator   | Name          | Example      | Result       |
+|------------|---------------|--------------|--------------|
+| `+`        | Addition      | `3 + 2`      | `5`          |
+| `-`        | Subtraction   | `3 - 2`      | `1`          |
+| `*`        | Multiplication| `3 * 2`      | `6`          |
+| `/`        | Division      | `3 / 2`      | `1.5`        |
+| `//`       | Floor Division| `3 // 2`     | `1`          |
+| `**`       | Exponentiation| `3 ** 2`     | `9`          |
+| `%`        | Modulus       | `3 % 2`      | `1`          |
+
 ## 2.1 Addition (`+`)
 
 Addition is used to add two numbers together. This is one of the most basic math operations you'll use in Python.
@@ -322,3 +333,107 @@ print(num_1 == num_2)
 # Output: False
 ```
 
+### 6.2 Not Equal (`!=`)
+Check if two values are not equal.
+
+```
+print(num_1 != num_2)  # Output: True
+```
+
+## 6.3 Greater Than and Less Than
+Check if one value is greater or less than another.
+
+```
+print(num_1 > num_2)
+# Output: True
+
+print(num_1 < num_2)
+# Output: False
+```
+
+## 7. Type Casting
+
+**Key Use Case**:
+- Type casting is useful when you receive **input as a string** and need to **perform arithmetic**. 
+- For example, you may get a string input from a user or read data from a file, and you need to convert that string to an integer or float.
+
+When working with user input or data from files, numeric values may be stored as strings. To use them in arithmetic, you'll need to convert them (or "cast" them) into integers or floats.
+
+**Converting Strings to Integers**
+
+```
+num_1 = '100'
+num_2 = '200'
+
+# Converts the strings into type int
+num_1 = int(num_1)
+num_2 = int(num_2)
+
+print(num_1 + num_2)
+
+# Output: 300
+```
+
+**Converting Strings to Floats**
+
+```
+num_1 = '3.14'
+
+# Assigns num_1 to type float
+num_1 = float(num_1)
+
+print(num_1)
+
+# Output: 3.14
+```
+
+**Common Issue: Adding Numbers as Strings**
+If you forget to cast, Python will treat numbers as strings and concatenate them instead of adding them:
+
+```
+num_1 = '100'
+num_2 = '200'
+
+print(num_1 + num_2)
+
+# Output: 100200 (concatenates the strings)
+```
+
+To fix this, always remember to cast your strings to the appropriate numeric type (int or float).
+
+## 8. Dealing with Problems
+**Problem: Accidentally Working with Strings Instead of Numbers**<br>
+You might sometimes have a number in the form of a string (from user input or files). Python will treat these as strings and perform string operations (like concatenation) instead of arithmetic.
+
+**Solution: Casting** <br>
+Always cast these strings into integers or floats using int() or float() to perform proper arithmetic.
+
+```
+num_1 = '100'
+num_2 = '200'
+
+# Where the casting the performed
+num_1 = int(num_1)
+num_2 = int(num_2)
+
+print(num_1 + num_2)
+
+# Output: 300
+```
+
+## Summary
+- **Integers** and **Floats** are the two main numeric data types in Python.
+- Use arithmetic operators like `+`, `-`, `*`, `/`, `//`, `**`, and `%` for basic math.
+- **Order of operations** follows PEMDAS, but you can control the order using parentheses.
+- **Incrementing** variables can be done with shorthand operators like `+=`.
+- Use built-in functions like `abs()` and `round()` to manipulate numbers.
+- **Comparisons** help you evaluate relationships between values, returning `True` or `False`.
+- Always **cast** strings to integers or floats when performing arithmetic.
+
+## Key Use Cases:
+- **Modulus operator** for checking even or odd numbers.
+- **Incrementing variables** for counting or updating values in loops.
+- **Absolute value** for calculating distances or removing negative signs.
+- **Rounding** for limiting decimal places in calculations.
+- **Comparisons** for conditional logic and decision-making.
+- **Type casting** when handling input or mixed data types.
