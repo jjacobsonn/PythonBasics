@@ -71,44 +71,59 @@ print(3 - 2)
 #### Key Use Case:
 - **Calculating differences**: Useful when determining how much something has decreased, such as when calculating the difference between two measurements or finding the balance in a bank account after a withdrawal.
 
-### 2.3 Multiplication (*)
+### 2.3 Multiplication (`*`)
 
 Multiplies two numbers.
 
 ```
-print(3 * 2)  # Output: 6
+print(3 * 2)# 
+
+Output: 6
 ```
 
-### 2.4 Division (/)
+### 2.4 Division (`/`)
 
-Divides the first number by the second. Always returns a float, even when dividing integers.
+Divides the first number by the second. **Always returns a float**, even when dividing integers.
 
 ```
-print(3 / 2)  # Output: 1.5
+print(3 / 2)
+
+# Output: 1.5
 ```
 
-### 2.5 Floor Division (//)
+### 2.5 Floor Division (`//`)
 
 Divides the first number by the second, but drops any decimals (**rounds down**).
 
 ```
-print(3 // 2)  # Output: 1
+print(3 // 2)
+
+# Output: 1
 ```
 
-### 2.6 Exponentiation (**)
+### 2.6 Exponentiation (`**`)
 
 Raises the first number to the power of the second.
 
 ```
-print(3 ** 2)  # Output: 9  (3 squared)
+print(3 ** 2)
+
+# Output: 9  (3 squared)
 ```
 
-### 2.7 Modulus (%)
+### 2.7 Modulus (`%`)
 
-Returns the remainder of the division of two numbers.
+The modulus operator `%` gives the remainder of the division.
+
+**Key Use Case**
+- The modulus operator is often used to check whether a number is even or odd. 
+- If `num % 2 == 0`, the number is even. If `num % 2 == 1`, the number is odd.
+
 
 ```
-print(3 % 2)  # Output: 1 (3 divided by 2 leaves a remainder of 1)
+print(3 % 2)
+
+# Output: 1 (3 divided by 2 leaves a remainder of 1)
 ```
 
 **Key Use Case:**
@@ -120,8 +135,11 @@ print(3 % 2)  # Output: 1 (3 divided by 2 leaves a remainder of 1)
 - **Checking even or odd numbers:**
 
     ```
-    print(2 % 2)  # Output: 0 (even)
-    print(3 % 2)  # Output: 1 (odd)
+    print(2 % 2)
+    # Output: 0 (even)
+
+    print(3 % 2)
+    # Output: 1 (odd)
     ```
 ## 3. Order of Operations (PEMDAS)
 
@@ -246,7 +264,7 @@ print(num)
 - It means: "Subtract `3` from `num` and store the result back in `num`."
 - After this line runs, num is `7` because `10 - 3 = 7`.
 
-## Summary
+### Summary
 - **Incrementing** is when you increase a variable’s value. It's commonly used when counting, updating scores, or iterating through loops.
 - The **basic way** to increment a variable is `num = num + 1`.
 - You can use the `+=` shorthand to increment a variable in fewer steps: `num += 1`.
@@ -254,6 +272,53 @@ print(num)
 
 By using these operators, you can efficiently manage and update variables in your programs.
 
+## 5. Built-in Functions for Numbers
 
+### 5.1 `abs()` - Absolute Value
+The `abs()` function returns the absolute value of a number (removes the negative sign).
 
+**Key Use Case**:
+- The absolute value is useful when calculating distances or when you want to work with non-negative values.
+
+    ```
+    print(abs(-3))
+    
+    # Output: 3
+    ```
+
+## 5.2 `round()` - Rounding
+The `round()` function rounds a float to the nearest whole number. You can also specify the number of decimal places.
+
+**Key Use Case**:
+- Rounding is often used when limiting decimal places is necessary, such as when dealing with money or precise measurements.
+
+    ```
+    # Rounding to Nearest Whole Number
+    print(round(3.75))
+
+    # Output: 4
+
+    # Rounded to 1 Decimal Place
+    print(round(3.75, 1))
+
+    # Output: 3.8
+    ```
+
+## 6. Comparisons
+
+**Ky Use Case**:
+- Comparisons are critical in conditional statements (e.g., `if` conditions), determining which values are equal, greater, or less than others.
+
+Comparisons are used to check relationships between values. They return a boolean value (`True` or `False`).
+
+### 6.1 Equal (`==`)
+Checks if two values are equal.
+
+```
+num_1 = 3
+num_2 = 2
+print(num_1 == num_2)
+
+# Output: False
+```
 
